@@ -52,6 +52,7 @@ def view_orders():
 
     conn.close()
 
+# Функция завершения заказа
 def complete_order(messagebox=None):
     selected_item = tree.selection()
 
@@ -91,6 +92,7 @@ order_details_entry.pack()
 # Создаём кнопку, которая будет добавлять введённые данные в таблицу
 add_button = tk.Button(app, text="Добавить заказ", command=add_order).pack()
 
+# Кнопка, которая будет менять статус заказа на Завершенный
 complete_button = tk.Button(app, text="Завершить заказ", command=complete_order)
 complete_button.pack()
 
